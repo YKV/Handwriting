@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+            <string>AvenirNext-Heavy</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HandwritingML" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2mI-b3-tH3">
+                                <rect key="frame" x="0.0" y="157" width="375" height="352"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2mI-b3-tH3" secondAttribute="height" multiplier="375:352" id="Myx-Ia-nra"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the PREDICT button below." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63r-XU-bY0">
+                                <rect key="frame" x="16" y="524" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="I41-Hu-KLu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                <color key="textColor" red="0.36540291878172593" green="0.36540291878172593" blue="0.36540291878172593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C42-6U-hAT">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.42745098039215684" green="0.73725490196078436" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5D3-8p-4vL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="PREDICT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="predictButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x5s-3M-vj3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2G3-O4-9yr">
+                                <rect key="frame" x="146.5" y="66" width="83" height="44"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="C42-6U-hAT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0ev-aB-7z0"/>
+                            <constraint firstItem="2G3-O4-9yr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1kh-RE-vNe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="63r-XU-bY0" secondAttribute="trailing" constant="16" id="5ZE-OA-v3s"/>
+                            <constraint firstItem="2mI-b3-tH3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FLn-Ve-lZf"/>
+                            <constraint firstItem="2mI-b3-tH3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MDT-Cv-kWk"/>
+                            <constraint firstItem="63r-XU-bY0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="XsI-xZ-VpL"/>
+                            <constraint firstItem="C42-6U-hAT" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cbT-9i-Lw0"/>
+                            <constraint firstItem="2mI-b3-tH3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iew-Vu-HAb"/>
+                            <constraint firstItem="63r-XU-bY0" firstAttribute="top" secondItem="2mI-b3-tH3" secondAttribute="bottom" constant="15" id="kY3-nV-XyN"/>
+                            <constraint firstItem="C42-6U-hAT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="np2-qO-2wb"/>
+                            <constraint firstItem="2mI-b3-tH3" firstAttribute="top" secondItem="2G3-O4-9yr" secondAttribute="bottom" constant="47" id="rir-Ue-coy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="drawingImageView" destination="2mI-b3-tH3" id="tjQ-XT-EmC"/>
+                        <outlet property="predictionLabel" destination="63r-XU-bY0" id="YgP-W5-TbX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
